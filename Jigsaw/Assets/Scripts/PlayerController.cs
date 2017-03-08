@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     public float accel;
     public float maxSpeed;
+    public bool canMove;
     private Rigidbody2D rigid;
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,10 @@ public class PlayerController : MonoBehaviour {
     }
     void FixedUpdate()
     {
+        if(!canMove)
+        {
+            return;
+        }
         float i = Input.GetAxis("Horizontal");
         rigid.AddForce(Vector2.right * accel * i);
         if (rigid.velocity.x >= maxSpeed)
