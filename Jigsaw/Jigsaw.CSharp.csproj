@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TextBoxManager.cs" />
     <Compile Include="Assets\Scripts\TextBoxManagerNoPlayer.cs" />
+    <Compile Include="Assets\Scripts\TextController.cs" />
     <Compile Include="Assets\Scripts\TextImporter.cs" />
     <Compile Include="Assets\Scripts\book.cs" />
     <Compile Include="Assets\Scripts\box.cs" />

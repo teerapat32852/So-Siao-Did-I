@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Levels/6th.unity
+- path: Assets/Levels/testdialog.unity
   isLoaded: 1
   isActive: 1
