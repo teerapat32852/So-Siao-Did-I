@@ -19,7 +19,9 @@ public class TextBoxManagerNoPlayer : MonoBehaviour
     public GameObject alansleep;
     public GameObject alanbust;
     public GameObject francisbust;
-   private bool enable=true;
+    public GameObject alansleep2;
+    public GameObject alansleep3;
+    private bool enable=true;
     public AudioSource sound;
     public AudioClip gulp;
     public AudioClip walk;
@@ -27,9 +29,9 @@ public class TextBoxManagerNoPlayer : MonoBehaviour
     public string levelToLoad;
     private bool line3 = false;
     private bool line4 = false;
-    private bool line7 = false;
+    private bool line8 = false;
     private bool line10 = false;
-    private bool line11 = false;
+    private bool line12 = false;
     // Use this for initialization
     void Start()
     {
@@ -84,30 +86,34 @@ public class TextBoxManagerNoPlayer : MonoBehaviour
                         alanwfrancis.SetActive(true);
                         StartCoroutine(WaitFor(.5f));
                     }
-                    if (currentLine == 7 && line7 == false)
+                    if (currentLine == 8 && line8 == false)
                     {
-                        line7 = true;
+                        line8 = true;
                         textBox.SetActive(false);
                         sound.PlayOneShot(walk);
-                        StartCoroutine(WaitFor(5));
-                        sound.PlayOneShot(door);
-                        textBox.SetActive(true);
+                        alanwfrancis.SetActive(false);
+                        alansleep.SetActive(true);
+                        StartCoroutine(WaitForBox(5));
+                        StartCoroutine(WaitSound(3));
+                        
                     }
                     if (currentLine == 10 && line10 == false)
                     {
                         line10 = true;
                         textBox.SetActive(false);
-                        alanwfrancis.SetActive(false);
-                        alansleep.SetActive(true);
-                        StartCoroutine(WaitFor(5));
+                        alansleep.SetActive(false);
+                        alansleep2.SetActive(true);
+                        StartCoroutine(WaitForBox(5));
                         
-                        textBox.SetActive(true);
+                        
                     }
-                    if (currentLine == 11 && line11 == false)
+                    if (currentLine == 12 && line12 == false)
                     {
-                        line11 = true;
-                        SceneManager.LoadScene(levelToLoad);
-                       
+                        alansleep2.SetActive(false);
+                        alansleep3.SetActive(true);
+                        line12 = true;
+                        StartCoroutine(WaitForLoad(5));
+
                     }
                     if (currentLine > endAtLine)
                     {
@@ -131,9 +137,32 @@ public class TextBoxManagerNoPlayer : MonoBehaviour
     private IEnumerator WaitFor(float sec)
     {
         enable = false;
-            yield return new WaitForSeconds(sec);
+        yield return new WaitForSeconds(sec);
         enable = true;
-        
+
+    }
+    private IEnumerator WaitForLoad(float sec)
+    {
+        enable = false;
+        yield return new WaitForSeconds(sec);
+        enable = true;
+        SceneManager.LoadScene(levelToLoad);
+    }
+    private IEnumerator WaitSound(float sec)
+    {
+        enable = false;
+        yield return new WaitForSeconds(sec);
+        enable = true;
+        sound.PlayOneShot(door);
+
+    }
+    private IEnumerator WaitForBox(float sec)
+    {
+        enable = false;
+        yield return new WaitForSeconds(sec);
+        enable = true;
+        textBox.SetActive(true);
+
     }
     private IEnumerator TextScroll(string lineOfText)
     {

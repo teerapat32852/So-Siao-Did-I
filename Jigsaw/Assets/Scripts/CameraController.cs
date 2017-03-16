@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour {
     bool change = false;
     public float xOffset;
     public float yOffset;
+    public float shift;
 	// Use this for initialization
 	void Start () {
         player = FindObjectOfType<PlayerController>();
@@ -17,7 +18,7 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (isFollowing == false)
-            transform.position = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset -4, transform.position.z);
+            transform.position = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset +shift, transform.position.z);
         else
         if (isFollowing==true)
             transform.position = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset, transform.position.z);

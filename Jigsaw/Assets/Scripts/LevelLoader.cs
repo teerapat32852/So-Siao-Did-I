@@ -5,6 +5,7 @@ using System.Collections;
 public class LevelLoader : MonoBehaviour {
     public bool inTrigger;
     public string levelToLoad;
+    public bool nobutton;
 	// Use this for initialization
 	void Start () {
         inTrigger = false;
@@ -13,7 +14,14 @@ public class LevelLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	 if(Input.GetKeyDown(KeyCode.E)&& inTrigger==true)
+        if(nobutton)
+        {
+            if (inTrigger == true)
+            {
+                SceneManager.LoadScene(levelToLoad);
+            }
+        }
+	 else if(Input.GetKeyDown(KeyCode.W)&& inTrigger==true)
         {
             SceneManager.LoadScene(levelToLoad);
         }
