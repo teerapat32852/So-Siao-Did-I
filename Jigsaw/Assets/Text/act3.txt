@@ -1,0 +1,56 @@
+inroom
+Alan: “What is happening?. Why Gabriel is acting very strange?”
+Gabriel: “Alan, quick!! Get this, the key for your Father & Mother bedroom.”cutscene
+Alan: “Gabriel!! what is happening?”
+Gabriel: “There is no time to speak. Quick Alan get back into your room, and…”
+Gabriel: “...Do not trust Francis.”endcutscene
+Alan: “Why can’t I  trust Francis?, what is happening?”
+Alan:“Oh yes, the key.”
+Alan:“The key to my mother and father bedroom.”
+Alan: “But… Why now, Where did Gabriel get the key?”
+Alan:“The room was never opened before,” 
+Alan:“I have to go and check what is in there.” 
+Alan:“Maybe there will be a pieces of this picture and numbers on it like this.”
+Alan: “Now there is a picture of me with number 5 on it” 
+Alan:“and the bottom left of the picture with number 8 on it.”
+Alan:“Maybe in my parent’s room there will be some clue.”
+infrontofroom
+Alan: “I have to find more clues on what is happening.” 
+Alan:“I have to start with my parents’ room” 
+Alan:“Its just at the end of the corridor.”
+Alan:"I must move quickly, Francis is still looking for me."
+getcaught
+Francis:“Alan!!, why are you not sleeping.”
+Francis:"Get back to your room."
+open parentroom
+Alan: “This is the room.”
+inroom
+Alan:"This room looks so old and dusty"
+Alan:"and it looks like everything has never been touched for a long time."
+Alan:“There must be something Gabriel wants me to see in this room.”
+
+
+
+interactpic
+showpic
+Alan: “She is my mother, she was so beautiful.”
+Alan: "There is a number on the back again."
+Alan: "This time its number 2."
+cut1
+cut2
+cut3
+cut4
+Alan: “Why does this feel so warm, good and happy, so this is how it feels to be loved?”
+Alan: “That box looks strange.”
+
+interactbox
+Alan: “The box is locked and it need some kind of number locking mechanism.”
+showbox
+Alan:“What is that note?”
+shownote
+“What does this mean?, Are there keys in this box?” 
+“Maybe it is the key for the rooms which are across my room, I wonder what is in there.”
+
+
+
+

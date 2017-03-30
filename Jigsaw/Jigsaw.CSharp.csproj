@@ -76,10 +76,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ActivateTextAtLine.cs" />
+    <Compile Include="Assets\Scripts\ActivateTextAtLineAct3.cs" />
     <Compile Include="Assets\Scripts\BookBoxManager.cs" />
     <Compile Include="Assets\Scripts\BoxBoxManager.cs" />
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Countdown.cs" />
+    <Compile Include="Assets\Scripts\DoorWarp.cs" />
+    <Compile Include="Assets\Scripts\DropPic.cs" />
+    <Compile Include="Assets\Scripts\FrancisRun.cs" />
     <Compile Include="Assets\Scripts\GuessController.cs" />
     <Compile Include="Assets\Scripts\LetterBoxManager.cs" />
     <Compile Include="Assets\Scripts\LetterText.cs" />
@@ -87,9 +92,13 @@
     <Compile Include="Assets\Scripts\LockedDoor.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TextBoxManager.cs" />
+    <Compile Include="Assets\Scripts\TextBoxManagerAct2.cs" />
+    <Compile Include="Assets\Scripts\TextBoxManagerAct3.cs" />
     <Compile Include="Assets\Scripts\TextBoxManagerNoPlayer.cs" />
     <Compile Include="Assets\Scripts\TextController.cs" />
     <Compile Include="Assets\Scripts\TextImporter.cs" />
+    <Compile Include="Assets\Scripts\activatetextatline1.cs" />
+    <Compile Include="Assets\Scripts\activatetextfrancis.cs" />
     <Compile Include="Assets\Scripts\book.cs" />
     <Compile Include="Assets\Scripts\box.cs" />
     <Compile Include="Assets\Scripts\changeshelf.cs" />
@@ -98,16 +107,21 @@
     <Compile Include="Assets\Scripts\dial3.cs" />
     <Compile Include="Assets\Scripts\dial4.cs" />
     <Compile Include="Assets\Scripts\dial5.cs" />
+    <Compile Include="Assets\Scripts\endch1.cs" />
+    <Compile Include="Assets\Scripts\ingamemusic.cs" />
     <Compile Include="Assets\Scripts\letter.cs" />
     <Compile Include="Assets\Scripts\poppopup.cs" />
     <Compile Include="Assets\Scripts\popupesc.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Text\act2.txt" />
+    <None Include="Assets\Text\act3.txt" />
     <None Include="Assets\Text\corridor.txt" />
     <None Include="Assets\Text\exampletxt.txt" />
     <None Include="Assets\Text\first.txt" />
     <None Include="Assets\Text\front.txt" />
     <None Include="Assets\Text\lib.txt" />
+    <None Include="Assets\Text\terr.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

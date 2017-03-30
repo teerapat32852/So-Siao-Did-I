@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
     public PlayerController player;
     public bool isFollowing;
-    
+    public bool free = false;
     bool change = false;
     public float xOffset;
     public float yOffset;
@@ -18,9 +18,16 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (isFollowing == false)
-            transform.position = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset +shift, transform.position.z);
+        {
+            if (free == false)
+                transform.position = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset + shift, transform.position.z);
+            else
+                return;
+        }
         else
-        if (isFollowing==true)
-            transform.position = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset, transform.position.z);
+        {
+            if (isFollowing == true)
+                transform.position = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset, transform.position.z);
+        }
     }
 }

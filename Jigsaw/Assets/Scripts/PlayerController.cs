@@ -6,11 +6,12 @@ public class PlayerController : MonoBehaviour {
     public float accel;
     public float maxSpeed;
     public bool canMove;
+    private Animator anim;
     private Rigidbody2D rigid;
 	// Use this for initialization
 	void Start () {
         rigid = GetComponent<Rigidbody2D>();
-
+        anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour {
             return;
         }
         float i = Input.GetAxis("Horizontal");
+        anim.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
         rigid.AddForce(Vector2.right * accel * i);
         if (rigid.velocity.x >= maxSpeed)
         {

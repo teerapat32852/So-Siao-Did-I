@@ -1,0 +1,48 @@
+Alan: “I have to complete the picture for I can find out what happen to my parents and what is in the box.”
+Walk around the house to find all the picture pieces
+MOMROOM1ST
+Alan:"This door is locked."
+Alan:"How about the living room?"
+MOMROOM
+Alan:"This door is locked, I have to find the key for this room."
+LIVINGROOM
+Alan: “Somehow this room feels strange, I wonder what it is.”
+LIVINGPIC
+showpic
+Alan:"Number 8?"
+Alan:"I think it has something to do with the number 5 i found earlier."
+DININGROOM
+cutscene1
+cutscene2
+cutscene3
+
+
+
+
+
+
+
+FRANCISROOM
+Francis: “Who’s there, Alan is that you?”
+Alan: “I have to get back to my room.”
+Francis: “Alan?”
+
+GETCAUGHT
+Francis: “Alan!!!, why are you not in your bed.”
+Francis takes Alan back to his room.
+
+SAFE
+CUTSCENE
+???: “Alan, have you not slept yet?”
+Alan: “No, he knows that I’m not sleeping.”
+Gabriel: “Alan don’t be afraid”
+Alan: “Gabriel?, What happened?“
+Gabriel: “Alan, quick!! Get this, the key for your Father & Mother bedroom.”
+Alan: “Gabriel!! what is happening?”
+Gabriel: “There is no time to speak. Quick Alan get back into your room, and do not trust Francis.”
+
+
+
+GAMEOVER
+“I must not let Francis know what I am doing.”
+

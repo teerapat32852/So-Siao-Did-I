@@ -10,14 +10,14 @@ public class ActivateTextAtLine : MonoBehaviour {
     public int startLine;
     public int endLine;
 
-    public TextBoxManager theTextBox;
+    public TextBoxManagerAct2 theTextBox;
 
     public bool requireButtonPress;
     private bool waitForPress;
     public bool destroyWhenActivated;
 	// Use this for initialization
 	void Start () {
-        theTextBox = FindObjectOfType<TextBoxManager>();
+        theTextBox = FindObjectOfType<TextBoxManagerAct2>();
 	}
 	
 	// Update is called once per frame
@@ -39,8 +39,8 @@ public class ActivateTextAtLine : MonoBehaviour {
     {
         if(other.name=="Player")
         {
-
-            if(requireButtonPress)
+            other.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            if (requireButtonPress)
             {
                 waitForPress = true;
                 return;
@@ -60,6 +60,7 @@ public class ActivateTextAtLine : MonoBehaviour {
     {
         if(other.name=="Player")
         {
+            other.gameObject.transform.GetChild(1).gameObject.SetActive(false);
             waitForPress = false;
         }
     }

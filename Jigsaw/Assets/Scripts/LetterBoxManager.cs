@@ -20,6 +20,8 @@ public class LetterBoxManager : MonoBehaviour
     public GameObject letter;
     public GameObject photo;
     public GameObject dropforitems;
+    public GameObject doortext;
+    public GameObject chapterend;
     private bool line8;
     private bool line12;
     // Use this for initialization
@@ -75,6 +77,8 @@ public class LetterBoxManager : MonoBehaviour
                     textBox.SetActive(false);
                     dropforitems.SetActive(true);
                     photo.SetActive(true);
+                    chapterend.SetActive(true);
+                    doortext.SetActive(false);
                     StartCoroutine(WaitForKeyDown(KeyCode.Return));
                 }
                 if (currentLine > endAtLine)
