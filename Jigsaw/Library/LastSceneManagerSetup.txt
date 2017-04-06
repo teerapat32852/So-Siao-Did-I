@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Levels/gameoveract2.unity
+- path: Assets/Levels/act3.unity
   isLoaded: 1
   isActive: 1

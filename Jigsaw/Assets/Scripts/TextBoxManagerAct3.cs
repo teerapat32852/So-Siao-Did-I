@@ -4,7 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TextBoxManagerAct3 : MonoBehaviour
-{
+{ 
+
     public CameraController camcon;
     public GameObject textBox;
     public Text theText;
@@ -25,9 +26,15 @@ public class TextBoxManagerAct3 : MonoBehaviour
     public GameObject panto;
     public GameObject box;
     public GameObject note;
+    public GameObject mom1;
+    public GameObject mom2;
+    public GameObject mom3;
     private bool line5;
     private bool line29;
     private bool line34;
+    private bool line38;
+    private bool line39;
+    private bool line40;
     private bool line47;
     private bool line49;
 
@@ -36,7 +43,8 @@ public class TextBoxManagerAct3 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+
+         player = FindObjectOfType<PlayerController>();
         camcon = FindObjectOfType<CameraController>();
         if (textFile != null)
         {
@@ -92,6 +100,30 @@ public class TextBoxManagerAct3 : MonoBehaviour
                boxtrigger.SetActive(true);
                
                 StartCoroutine(WaitForKeyDown(KeyCode.Return));
+            }
+            if (currentLine == 38 && line38 == false)
+            {
+                line38 = true;
+                textBox.SetActive(false);
+
+                mom1.SetActive(true);
+
+            }
+            if (currentLine == 39 && line39== false)
+            {
+                line39 = true;
+                textBox.SetActive(false);
+
+                mom2.SetActive(true);
+
+            }
+            if (currentLine == 40 && line40 == false)
+            {
+                line40 = true;
+                textBox.SetActive(false);
+
+                mom3.SetActive(true);
+                StartCoroutine(WaitForFlash(KeyCode.Return));
             }
             if (currentLine == 47 && line47 == false)
             {
@@ -195,30 +227,30 @@ public class TextBoxManagerAct3 : MonoBehaviour
         textBox.SetActive(true);
 
     }
-    //private IEnumerator WaitForFlash(KeyCode keyCode)
-    //{
-    //    do
-    //    {
-    //        yield return null;
-    //    } while (!Input.GetKeyDown(keyCode));
+    private IEnumerator WaitForFlash(KeyCode keyCode)
+    {
+        do
+        {
+            yield return null;
+        } while (!Input.GetKeyDown(keyCode));
 
 
 
-    //    flashback1.SetActive(false);
-    //    flashback2.SetActive(false);
-    //    flashback3.SetActive(false);
-    //    dropforitems.SetActive(false);
-    //    //  textBox.SetActive(true);
+        mom1.SetActive(false);
+       mom2.SetActive(false);
+        mom3.SetActive(false);
+        dropforitems.SetActive(false);
+        //  textBox.SetActive(true);
 
-    //}
-    //private IEnumerator WaitForLoad()
-    //{
+    }
+    private IEnumerator WaitForLoad()
+    {
 
-    //    player.canMove = false;
-    //    yield return new WaitForSeconds(1.5f);
-    //    SceneManager.LoadScene(leveltoload);
+        player.canMove = false;
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(leveltoload);
 
-    //}
+    }
     private IEnumerator TextScroll(string lineOfText)
     {
         int letter = 0;

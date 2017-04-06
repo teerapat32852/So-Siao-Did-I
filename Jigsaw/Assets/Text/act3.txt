@@ -39,9 +39,9 @@ Alan: "This time its number 2."
 cut1
 cut2
 cut3
-cut4
 Alan: “Why does this feel so warm, good and happy, so this is how it feels to be loved?”
 Alan: “That box looks strange.”
+
 
 interactbox
 Alan: “The box is locked and it need some kind of number locking mechanism.”

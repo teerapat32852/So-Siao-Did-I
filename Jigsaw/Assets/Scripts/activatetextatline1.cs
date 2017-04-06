@@ -5,9 +5,9 @@ using UnityEngine;
 public class activatetextatline1 : MonoBehaviour
 {
 
-
+    public PlayerController player;
     public TextAsset theText;
-
+    public bool triggered;
     public int startLine;
     public int endLine;
 
@@ -19,6 +19,7 @@ public class activatetextatline1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         theTextBox = FindObjectOfType<TextBoxManager>();
     }
 
@@ -66,5 +67,9 @@ public class activatetextatline1 : MonoBehaviour
             other.gameObject.transform.GetChild(1).gameObject.SetActive(false);
             waitForPress = false;
         }
+    }
+    void OnDestroy()
+    {
+        player.transform.GetChild(1).gameObject.SetActive(false);
     }
 }

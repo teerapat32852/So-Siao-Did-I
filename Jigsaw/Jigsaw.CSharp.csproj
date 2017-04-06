@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\letter.cs" />
     <Compile Include="Assets\Scripts\poppopup.cs" />
     <Compile Include="Assets\Scripts\popupesc.cs" />
+    <Compile Include="Assets\Scripts\warp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Text\act2.txt" />

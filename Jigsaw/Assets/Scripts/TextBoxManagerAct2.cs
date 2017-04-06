@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TextBoxManagerAct2 : MonoBehaviour
 {
+    
     public CameraController camcon;
     public GameObject textBox;
     public Text theText;
@@ -44,7 +45,9 @@ public class TextBoxManagerAct2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+     
+    
+    player = FindObjectOfType<PlayerController>();
         camcon = FindObjectOfType<CameraController>();
         if (textFile != null)
         {
