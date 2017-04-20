@@ -24,15 +24,13 @@ public class DoorWarp : MonoBehaviour {
             if (inTrigger == true)
             {
                 player.canMove = false;
-                player.transform.position = target.transform.position;
-                player.canMove = true;
+                StartCoroutine(ChangeLvl());
             }
         }
         else if (Input.GetKeyDown(KeyCode.W) && inTrigger == true)
         {
             player.canMove = false;
-            player.transform.position = target.transform.position;
-            player.canMove = true;
+            StartCoroutine(ChangeLvl());
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -48,5 +46,15 @@ public class DoorWarp : MonoBehaviour {
         {
             inTrigger = false;
         }
+    }
+    IEnumerator ChangeLvl()
+    {
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        player.transform.position = target.transform.position;
+        fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(-1);
+        yield return new WaitForSeconds(fadeTime);
+        player.canMove = true;
+
     }
 }

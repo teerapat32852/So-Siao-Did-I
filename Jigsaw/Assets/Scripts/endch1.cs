@@ -50,7 +50,8 @@ public class endch1 : MonoBehaviour {
     {
 
         player.canMove = false;
-        yield return new WaitForSeconds(1.5f);
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
         SceneManager.LoadScene(leveltoload);
 
     }

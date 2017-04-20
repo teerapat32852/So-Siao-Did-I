@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Countdown.cs" />
     <Compile Include="Assets\Scripts\DoorWarp.cs" />
     <Compile Include="Assets\Scripts\DropPic.cs" />
+    <Compile Include="Assets\Scripts\Fading.cs" />
     <Compile Include="Assets\Scripts\FrancisRun.cs" />
     <Compile Include="Assets\Scripts\GuessController.cs" />
     <Compile Include="Assets\Scripts\LetterBoxManager.cs" />

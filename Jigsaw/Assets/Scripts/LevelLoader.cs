@@ -23,7 +23,7 @@ public class LevelLoader : MonoBehaviour {
         }
 	 else if(Input.GetKeyDown(KeyCode.W)&& inTrigger==true)
         {
-            SceneManager.LoadScene(levelToLoad);
+            StartCoroutine(ChangeLvl());
         }
 	}
     void OnTriggerEnter2D(Collider2D other)
@@ -39,5 +39,11 @@ public class LevelLoader : MonoBehaviour {
         {
             inTrigger = false;
         }
+    }
+    IEnumerator ChangeLvl()
+    {
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        SceneManager.LoadScene(levelToLoad);
     }
 }
