@@ -43,7 +43,7 @@ public class LevelLoader : MonoBehaviour {
     IEnumerator ChangeLvl()
     {
         float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(fadeTime);
+        yield return new WaitForSeconds(fadeTime+.5f);
         SceneManager.LoadScene(levelToLoad);
     }
 }

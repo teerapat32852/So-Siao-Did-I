@@ -1,9 +1,9 @@
 inroom
 Alan: “What is happening?. Why Gabriel is acting very strange?”
-Gabriel: “Alan, quick!! Get this, the key for your Father & Mother bedroom.”cutscene
+Gabriel: “Alan, quick!! Get this, the key for your Father & Mother bedroom.”
 Alan: “Gabriel!! what is happening?”
 Gabriel: “There is no time to speak. Quick Alan get back into your room, and…”
-Gabriel: “...Do not trust Francis.”endcutscene
+Gabriel: “...Do not trust Francis.”
 Alan: “Why can’t I  trust Francis?, what is happening?”
 Alan:“Oh yes, the key.”
 Alan:“The key to my mother and father bedroom.”

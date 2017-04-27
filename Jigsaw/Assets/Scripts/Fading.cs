@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fading : MonoBehaviour {
 
     public Texture2D fadetexture;
-    public float fadespeed=0.5f;
+    public float fadespeed=0.8f;
     private int drawDepth= -1000;
     private float alpha = 1.0f;
     private int fadeDir = -1; //-1=in 1=out
@@ -28,4 +28,5 @@ public class Fading : MonoBehaviour {
     {
         BeginFade(-1);
     }
+  
 }

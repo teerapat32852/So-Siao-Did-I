@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Countdown : MonoBehaviour
 {
-    float timeLeft = 30.0f;
+    float timeLeft = 50.0f;
     public GameObject francis;
     public GameObject caughttrigger;
     public Text text;

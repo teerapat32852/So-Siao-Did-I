@@ -31,6 +31,12 @@ public class TextBoxManagerAct2 : MonoBehaviour
     public GameObject gabtrigger;
     public GameObject gabbust;
     public GameObject chapterend;
+    public GameObject gab1;
+    public GameObject gab2;
+    public GameObject gab3;
+    public GameObject gab4;
+    public GameObject gab5;
+    private bool fromcutscene;
     private bool line4;
     private bool line10;
     private bool line14;
@@ -41,6 +47,12 @@ public class TextBoxManagerAct2 : MonoBehaviour
     private bool line42;
     private bool line35;
     private bool line32;
+    private bool line38;
+    private bool line39;
+    private bool line41;
+    private bool line40;
+    private bool line36;
+    private bool enable = true;
     public string leveltoload;
     // Use this for initialization
     void Start()
@@ -94,18 +106,20 @@ public class TextBoxManagerAct2 : MonoBehaviour
         }
         if (currentLine == 14 && line14 == false)
         {
-            line14 = true;
             textBox.SetActive(false);
-           
-            flashback1.SetActive(true);
-           
+            StartCoroutine(Changetocutscenedine());
+            line14 = true;
+            
+            fromcutscene = true;
+            StartCoroutine(WaitForFlash(KeyCode.Return));
+
+
+
         }
         if (currentLine == 15 && line15 == false)
         {
-            line15 = true;
-            textBox.SetActive(false);
-
-            flashback2.SetActive(true);
+            
+            
          
         }
         if (currentLine == 16 && line16 == false)
@@ -113,7 +127,7 @@ public class TextBoxManagerAct2 : MonoBehaviour
             line16 = true;
             textBox.SetActive(false);
 
-            flashback3.SetActive(true);
+//            flashback3.SetActive(true);
             StartCoroutine(WaitForFlash(KeyCode.Return));
         }
         if (currentLine == 27 && line27 == false)
@@ -129,57 +143,83 @@ public class TextBoxManagerAct2 : MonoBehaviour
             SceneManager.LoadScene("gameoveract2");
 
         }
-        if (currentLine == 35 && line35 == false)
+        if (currentLine == 35&& line35 == false)
         {
+            textBox.SetActive(false);
+            StartCoroutine(Changetocutscenegab());
             line35 = true;
             countdown.SetActive(false);
             frantrigger.SetActive(false);
+            
 
+        }
+        if (currentLine == 36 && line36 == false)
+        {
+            line36 = true;
+            gab1.SetActive(false);
+            gab2.SetActive(true);
+            //textBox.SetActive(false);
 
         }
         if (currentLine == 37 && line37 == false)
         {
             line37 = true;
-            gabbust.SetActive(true);
-
+            gab2.SetActive(false);
+            gab3.SetActive(true);
 
         }
-        if (currentLine == 42&& line42 == false)
+        //if (currentLine == 39 && line39 == false)
+        //{
+        //    line39 = true;
+           
+
+        //}
+        if (currentLine == 39 && line39 == false)
         {
-            gabbust.SetActive(false);
-            line42 = true;
-            textBox.SetActive(false);
-            dropforitems.SetActive(true);
-            chapterend.SetActive(true);
+            line39 = true;
+            gab3.SetActive(false);
+            gab4.SetActive(true);
+
+        }
+        if (currentLine == 41&& line41 == false)
+        {
+            gab4.SetActive(false);
+            gab5.SetActive(true);
+            line41 = true;
+          //  textBox.SetActive(false);
+           // dropforitems.SetActive(true);
+            //chapterend.SetActive(true);
             StartCoroutine(WaitForLoad());
 
         }
         // theText.text = textLines[currentLine];
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (enable == true)
         {
-            if (!isTyping)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-              
-
-                currentLine += 1;
-              
-                if (currentLine > endAtLine)
+                if (!isTyping)
                 {
-                    DisableTextBox();
+
+
+                    currentLine += 1;
+
+                    if (currentLine > endAtLine)
+                    {
+                        DisableTextBox();
+                    }
+                    else
+                    {
+                        StartCoroutine(TextScroll(textLines[currentLine]));
+                    }
                 }
-                else
+                else if (isTyping && !cancelTyping)
                 {
-                    StartCoroutine(TextScroll(textLines[currentLine]));
+                    cancelTyping = true;
                 }
-            }
-            else if (isTyping && !cancelTyping)
-            {
-                cancelTyping = true;
-            }
 
 
+            }
         }
-
     }
     private IEnumerator WaitForKeyDown(KeyCode keyCode)
     {
@@ -202,23 +242,31 @@ public class TextBoxManagerAct2 : MonoBehaviour
             yield return null;
         } while (!Input.GetKeyDown(keyCode));
 
-
-
+        DisableTextBox();
+        yield return new WaitForSeconds(.8f);
         flashback1.SetActive(false);
-        flashback2.SetActive(false);
-        flashback3.SetActive(false);
-        dropforitems.SetActive(false);
-      //  textBox.SetActive(true);
+        //flashback2.SetActive(false);
+        //flashback3.SetActive(false);
+       // dropforitems.SetActive(false);
+       // gab5.SetActive(false);
+        //  textBox.SetActive(true);
+       
 
     }
     private IEnumerator WaitForLoad()
     {
-
+        do
+        {
+            yield return null;
+        } while (!Input.GetKeyDown(KeyCode.Return));
         player.canMove = false;
-        yield return new WaitForSeconds(1.5f);
+
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime+1);
         SceneManager.LoadScene(leveltoload);
 
     }
+   
     private IEnumerator TextScroll(string lineOfText)
     {
         int letter = 0;
@@ -235,28 +283,106 @@ public class TextBoxManagerAct2 : MonoBehaviour
         isTyping = false;
         cancelTyping = false; ;
     }
-    public void EnableTextBox()
+    IEnumerator Changetocutscenedine()
     {
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        flashback1.SetActive(true);
+        fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(-1);
+        yield return new WaitForSeconds(fadeTime);
+
+
+    }
+    IEnumerator Changetocutscenegab()
+    {
+        enable = false;
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+        textBox.SetActive(true);
+        gab1.SetActive(true);
+        fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(-1);
+        yield return new WaitForSeconds(fadeTime);
+        enable = true;
+
+    }
+    private IEnumerator shiftcam()
+    {
+
+        player.canMove = false;
+        camcon.shifting = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shifting = false;
         textBox.SetActive(true);
         isActive = true;
-        player.canMove = false;
+
         camcon.isFollowing = false;
         StartCoroutine(TextScroll(textLines[currentLine]));
+
+    }
+    private IEnumerator shiftcamback()
+    {
+        isActive = false;
+        textBox.SetActive(false);
+        camcon.shiftingback = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shiftingback = false;
+
+        camcon.isFollowing = true;
+        player.canMove = true;
+        textBox.SetActive(false);
+
+    }
+    private IEnumerator shiftcambackfromcutscene()
+    {
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+
+
+        isActive = false;
+        textBox.SetActive(false);
+        camcon.shiftingback = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shiftingback = false;
+
+        camcon.isFollowing = true;
+
+        textBox.SetActive(false);
+        fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(-1);
+        yield return new WaitForSeconds(fadeTime);
+        player.canMove = true;
+    }
+    public void EnableTextBox()
+    {
+        StartCoroutine(shiftcam());
+        //textBox.SetActive(true);
+        //isActive = true;
+        //player.canMove = false;
+        //camcon.isFollowing = false;
+        //StartCoroutine(TextScroll(textLines[currentLine]));
 
 
     }
     public void DisableTextBox()
     {
-        isActive = false;
-        camcon.isFollowing = true;
-        player.canMove = true;
-        textBox.SetActive(false);
+        if (fromcutscene == true)
+        {
+            StartCoroutine(shiftcambackfromcutscene());
+        }
+        else
+        {
+            StartCoroutine(shiftcamback());
+        }
+        //isActive = false;
+        //camcon.isFollowing = true;
+        //player.canMove = true;
+        //textBox.SetActive(false);
 
     }
     public void ReloadScript(TextAsset theText)
     {
         if (theText != null)
         {
+            fromcutscene = false;
             textLines = new string[1];
             textLines = (textFile.text.Split('\n'));
 

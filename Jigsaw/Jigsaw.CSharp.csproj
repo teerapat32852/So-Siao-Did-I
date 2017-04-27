@@ -98,6 +98,9 @@
     <Compile Include="Assets\Scripts\TextBoxManagerNoPlayer.cs" />
     <Compile Include="Assets\Scripts\TextController.cs" />
     <Compile Include="Assets\Scripts\TextImporter.cs" />
+    <Compile Include="Assets\Scripts\activatetextatdooract1.cs" />
+    <Compile Include="Assets\Scripts\activatetextatdooract2.cs" />
+    <Compile Include="Assets\Scripts\activatetextatdooract3.cs" />
     <Compile Include="Assets\Scripts\activatetextatline1.cs" />
     <Compile Include="Assets\Scripts\activatetextfrancis.cs" />
     <Compile Include="Assets\Scripts\book.cs" />

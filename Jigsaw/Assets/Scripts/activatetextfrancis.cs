@@ -7,7 +7,7 @@ public class activatetextfrancis : MonoBehaviour
 
 
     public TextAsset theText;
-
+    public Animator anim;
     public int startLine;
     public int endLine;
 
@@ -19,12 +19,15 @@ public class activatetextfrancis : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
         theTextBox = FindObjectOfType<TextBoxManagerAct2>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (theTextBox.isActive == true)
+            return;
         if (waitForPress && Input.GetKeyDown(KeyCode.E))
         {
             theTextBox.ReloadScript(theText);
@@ -40,9 +43,11 @@ public class activatetextfrancis : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+     
         if (other.name == "francis")
         {
-
+            anim = other.gameObject.GetComponent<Animator>();
+            anim.SetBool("franstop" ,true);
             if (requireButtonPress)
             {
                 waitForPress = true;

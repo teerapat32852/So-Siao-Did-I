@@ -21,9 +21,11 @@ public class LetterBoxManager : MonoBehaviour
     public GameObject photo;
     public GameObject dropforitems;
     public GameObject doortext;
+    public GameObject exitdoor;
     public GameObject chapterend;
     private bool line8;
     private bool line12;
+    private bool fromcutscene = false;
     // Use this for initialization
     void Start()
     {
@@ -79,6 +81,7 @@ public class LetterBoxManager : MonoBehaviour
                     photo.SetActive(true);
                     chapterend.SetActive(true);
                     doortext.SetActive(false);
+                    exitdoor.SetActive(true);
                     StartCoroutine(WaitForKeyDown(KeyCode.Return));
                 }
                 if (currentLine > endAtLine)
@@ -129,22 +132,77 @@ public class LetterBoxManager : MonoBehaviour
         isTyping = false;
         cancelTyping = false; ;
     }
-    public void EnableTextBox()
+    private IEnumerator shiftcam()
     {
+
+        player.canMove = false;
+        camcon.shifting = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shifting = false;
         textBox.SetActive(true);
         isActive = true;
-        player.canMove = false;
+
         camcon.isFollowing = false;
         StartCoroutine(TextScroll(textLines[currentLine]));
+
+    }
+    private IEnumerator shiftcamback()
+    {
+        isActive = false;
+        textBox.SetActive(false);
+        camcon.shiftingback = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shiftingback = false;
+
+        camcon.isFollowing = true;
+        player.canMove = true;
+        textBox.SetActive(false);
+
+    }
+    private IEnumerator shiftcambackfromcutscene()
+    {
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+
+
+        isActive = false;
+        textBox.SetActive(false);
+        camcon.shiftingback = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shiftingback = false;
+
+        camcon.isFollowing = true;
+
+        textBox.SetActive(false);
+        fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(-1);
+        yield return new WaitForSeconds(fadeTime);
+        player.canMove = true;
+    }
+    public void EnableTextBox()
+    {
+        StartCoroutine(shiftcam());
+        //textBox.SetActive(true);
+        //isActive = true;
+        //player.canMove = false;
+        //camcon.isFollowing = false;
+        //StartCoroutine(TextScroll(textLines[currentLine]));
 
 
     }
     public void DisableTextBox()
     {
-        isActive = false;
-        camcon.isFollowing = true;
-        player.canMove = true;
-        textBox.SetActive(false);
+        if (fromcutscene == true)
+        {
+            StartCoroutine(shiftcambackfromcutscene());
+        }
+        else
+        {
+            StartCoroutine(shiftcamback());
+        }
+        //isActive = false;
+        //camcon.isFollowing = true;
+        //player.canMove = true;
+        //textBox.SetActive(false);
 
     }
     public void ReloadScript(TextAsset theText)

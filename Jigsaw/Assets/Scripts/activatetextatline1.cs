@@ -26,8 +26,11 @@ public class activatetextatline1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (theTextBox.isActive == true)
+            return;
         if (waitForPress && Input.GetKeyDown(KeyCode.E))
         {
+            
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
@@ -49,6 +52,7 @@ public class activatetextatline1 : MonoBehaviour
                 waitForPress = true;
                 return;
             }
+            
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;

@@ -21,7 +21,7 @@ public class BoxBoxManager : MonoBehaviour
     
 
     private bool line5;
-
+    private bool fromcutscene = false;
     // Use this for initialization
     void Start()
     {
@@ -113,22 +113,77 @@ public class BoxBoxManager : MonoBehaviour
         isTyping = false;
         cancelTyping = false; ;
     }
-    public void EnableTextBox()
+    private IEnumerator shiftcam()
     {
+
+        player.canMove = false;
+        camcon.shifting = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shifting = false;
         textBox.SetActive(true);
         isActive = true;
-        player.canMove = false;
+
         camcon.isFollowing = false;
         StartCoroutine(TextScroll(textLines[currentLine]));
+
+    }
+    private IEnumerator shiftcamback()
+    {
+        isActive = false;
+        textBox.SetActive(false);
+        camcon.shiftingback = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shiftingback = false;
+
+        camcon.isFollowing = true;
+        player.canMove = true;
+        textBox.SetActive(false);
+
+    }
+    private IEnumerator shiftcambackfromcutscene()
+    {
+        float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+
+
+        isActive = false;
+        textBox.SetActive(false);
+        camcon.shiftingback = true;
+        yield return new WaitForSeconds(.6f);
+        camcon.shiftingback = false;
+
+        camcon.isFollowing = true;
+
+        textBox.SetActive(false);
+        fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(-1);
+        yield return new WaitForSeconds(fadeTime);
+        player.canMove = true;
+    }
+    public void EnableTextBox()
+    {
+        StartCoroutine(shiftcam());
+        //textBox.SetActive(true);
+        //isActive = true;
+        //player.canMove = false;
+        //camcon.isFollowing = false;
+        //StartCoroutine(TextScroll(textLines[currentLine]));
 
 
     }
     public void DisableTextBox()
     {
-        isActive = false;
-        camcon.isFollowing = true;
-        player.canMove = true;
-        textBox.SetActive(false);
+        if (fromcutscene == true)
+        {
+            StartCoroutine(shiftcambackfromcutscene());
+        }
+        else
+        {
+            StartCoroutine(shiftcamback());
+        }
+        //isActive = false;
+        //camcon.isFollowing = true;
+        //player.canMove = true;
+        //textBox.SetActive(false);
 
     }
     public void ReloadScript(TextAsset theText)

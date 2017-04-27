@@ -26,6 +26,8 @@ public class ActivateTextAtLineAct3: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (theTextBox.isActive == true)
+            return;
         if (waitForPress && Input.GetKeyDown(KeyCode.E))
         {
             theTextBox.ReloadScript(theText);

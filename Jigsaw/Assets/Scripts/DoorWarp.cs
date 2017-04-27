@@ -51,10 +51,12 @@ public class DoorWarp : MonoBehaviour {
     {
         float fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(1);
         yield return new WaitForSeconds(fadeTime);
+        player.canMove = true;
         player.transform.position = target.transform.position;
+        yield return new WaitForSeconds(.2f);
         fadeTime = GameObject.Find("fader").GetComponent<Fading>().BeginFade(-1);
         yield return new WaitForSeconds(fadeTime);
-        player.canMove = true;
+        
 
     }
 }
