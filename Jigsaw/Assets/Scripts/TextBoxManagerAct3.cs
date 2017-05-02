@@ -396,6 +396,7 @@ public class TextBoxManagerAct3 : MonoBehaviour
     }
     public void EnableTextBox()
     {
+        player.indialogue = true;
         StartCoroutine(shiftcam());
         //textBox.SetActive(true);
         //isActive = true;
@@ -407,6 +408,7 @@ public class TextBoxManagerAct3 : MonoBehaviour
     }
     public void DisableTextBox()
     {
+        player.indialogue = false;
         if (fromcutscene == true)
         {
             StartCoroutine(shiftcambackfromcutscene());

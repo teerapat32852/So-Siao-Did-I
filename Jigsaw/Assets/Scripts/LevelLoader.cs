@@ -3,18 +3,21 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LevelLoader : MonoBehaviour {
+    public PlayerController player;
     public bool inTrigger;
     public string levelToLoad;
     public bool nobutton;
 	// Use this for initialization
 	void Start () {
         inTrigger = false;
-
-	}
+        player = FindObjectOfType<PlayerController>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if(nobutton)
+        if (player.indialogue == true)
+            return;
+        if (nobutton)
         {
             if (inTrigger == true)
             {

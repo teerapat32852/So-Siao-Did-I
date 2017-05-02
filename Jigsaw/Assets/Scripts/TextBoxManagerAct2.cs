@@ -28,6 +28,7 @@ public class TextBoxManagerAct2 : MonoBehaviour
     public GameObject flashback2;
     public GameObject flashback3;
     public GameObject countdown;
+    public GameObject timer;
     public GameObject gabtrigger;
     public GameObject gabbust;
     public GameObject chapterend;
@@ -149,6 +150,7 @@ public class TextBoxManagerAct2 : MonoBehaviour
             StartCoroutine(Changetocutscenegab());
             line35 = true;
             countdown.SetActive(false);
+            timer.SetActive(false);
             frantrigger.SetActive(false);
             
 
@@ -353,6 +355,7 @@ public class TextBoxManagerAct2 : MonoBehaviour
     }
     public void EnableTextBox()
     {
+        player.indialogue = true;
         StartCoroutine(shiftcam());
         //textBox.SetActive(true);
         //isActive = true;
@@ -364,6 +367,7 @@ public class TextBoxManagerAct2 : MonoBehaviour
     }
     public void DisableTextBox()
     {
+        player.indialogue = false;
         if (fromcutscene == true)
         {
             StartCoroutine(shiftcambackfromcutscene());

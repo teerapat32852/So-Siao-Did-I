@@ -162,6 +162,7 @@ public class BookBoxManager : MonoBehaviour
     }
     public void EnableTextBox()
     {
+        player.indialogue = true;
         StartCoroutine(shiftcam());
         //textBox.SetActive(true);
         //isActive = true;
@@ -173,6 +174,7 @@ public class BookBoxManager : MonoBehaviour
     }
     public void DisableTextBox()
     {
+        player.indialogue = false;
         if (fromcutscene == true)
         {
             StartCoroutine(shiftcambackfromcutscene());

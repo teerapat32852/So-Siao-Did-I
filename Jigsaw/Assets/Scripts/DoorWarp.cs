@@ -19,6 +19,8 @@ public class DoorWarp : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (player.indialogue == true)
+            return;
         if (nobutton)
         {
             if (inTrigger == true)

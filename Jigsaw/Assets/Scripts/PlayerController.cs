@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public bool canMove;
     public GameObject interact;
     private Animator anim;
+    public bool indialogue = false;
     private Rigidbody2D rigid;
 	// Use this for initialization
 	void Start () {

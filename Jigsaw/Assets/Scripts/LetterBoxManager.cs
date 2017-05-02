@@ -180,6 +180,7 @@ public class LetterBoxManager : MonoBehaviour
     }
     public void EnableTextBox()
     {
+        player.indialogue = true;
         StartCoroutine(shiftcam());
         //textBox.SetActive(true);
         //isActive = true;
@@ -191,6 +192,7 @@ public class LetterBoxManager : MonoBehaviour
     }
     public void DisableTextBox()
     {
+        player.indialogue = false;
         if (fromcutscene == true)
         {
             StartCoroutine(shiftcambackfromcutscene());
