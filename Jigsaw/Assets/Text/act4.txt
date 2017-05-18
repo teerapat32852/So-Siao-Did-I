@@ -1,0 +1,210 @@
+enter francis
+Alan:"What is going on in this house..."
+Alan:"Gabriel said that I have to come here if I want to know what happened to my parents."
+
+
+interact box
+pill
+book
+Alan:“What is this?” 
+Alan:“A pill and a book.”
+Alan:"The book is about drugs."
+Alan:"This drug seems to be familiar…"
+Alan:“Oh! wait,”
+Alan:“This is what Francis gives me everyday.” 
+Alan:“There is a medicine book in the reading room.” 
+Alan:"I need to go and find out what this medicine does."
+Francis:“Gabriel!!! Damn you!! How dare you!!”
+Gabriel:“Stay away from Alan you damn evil!!!!”
+Alan:"What’s happening out there..."
+
+
+walktohall
+Francis:“Damn you Gabriel, you are always the hitch in my plan.”
+Gabriel:“I won’t let you do it, Francis!!”
+Francis:“You think you can cross me? Come on!!!”
+Gabriel: “You want this yourself, Francis!!!”
+fight
+fight
+fight
+fight
+fight
+Alan:recall something blabla
+Alan:“Mom! Dad! Stop it please”
+Dad:“Alan get back to your room”
+Alan:“No! Unless you stop this inhuman thing”
+Mom:“Please Alan, do as what your father says.”
+Alan:“No!! You have been doing this for a long time, haven’t you?”
+Mom:“All of this is just for you my dear.”
+Dad:“This is for you Alan.”
+Alan:“No!!!, I cannot take it anymore, you need to stop it!!!”
+Mom:“Alan! What are you doing..”
+
+Alan:“ Mom! Dad! Noooooooo!”
+Francis:“Where is it!!!!”
+Francis:“Damn you!!! Gabriel”
+Francis:“Now..., where is Alan...”
+Alan:"I have to go to the reading room before he finds out what I am doing."
+
+
+caughtbyfrancis
+Francis:“Alan!!!, why are you not asleep.”
+
+
+interactgabriel
+Alan:blabla need to go the library
+
+
+enterlib
+Alan:“Where is that book about medicine.”
+
+
+interactmainshelf
+Alan:“Here it is.” 
+book
+Alan:"Now where is it in the book..."
+Alan:“What is this?” 
+Alan:“The medicine is used to cause memory loss?”
+Alan:“Why does Francis have to do this to me.”
+Alan:“What is he planning...”
+Alan:"Oh! The box!"
+
+
+box wrong code
+"This is the wrong code"
+
+
+box right code
+Alan:“Yes, it’s opened. Let’s see what’s inside.”
+Alan:"What is this?"
+Alan:“Why are there so many documents in this box?”
+alan doc
+Alan:“About me?”
+exp doc
+Alan:“What is the experiment” 
+fran doc
+Alan:“This one is about Francis,”
+gab doc
+Alan:“and this is about Gabriel.”
+
+fran appear
+Francis:“Alan, why aren’t you sleeping as I told”
+Alan:“What happened, Francis?” 
+Alan:“And what is with the knife?” 
+Francis:“Oh Alan...” 
+Francis:“you seems to know something that should be kept secret.”
+Alan:“Francis!! I don’t know anything”
+Francis:“Oh Alan,”
+Francis:“you seem to be hiding something behind your back.”
+Francis:“Can I see it..”
+Alan:“No!!! I won’t let you.”
+Francis:“Alan,” 
+Francis:“you know the only thing I hate is a liar,”
+Francis:“and you know what?”
+Francis:“Liars go to hell”
+Alan:“No!!!, Francis!!! stop!!!”
+Gabriel:“Alan!! run!!!”
+scene
+scene
+scene
+scene
+Gabriel:“Sorry Alan, I was late.. Are you hurt”
+Alan:“No I’m fine.” 
+Alan:“Gabriel,”
+Alan:“Can you tell me what is happening and what is all of these”
+Alan gives Gabriel all the documents.
+Gabriel: “Forget it Alan,”
+Gabriel:“these are relics of the past,” 
+Gabriel:“just forget it.”
+Alan:“Am I going to die?” 
+Alan:“It says in the document”
+Gabriel:“No, nothing will harm you Alan.”
+Gabriel:“You’ll live because I promised that I will protect you.”
+Gabriel:“And you will be fine as long as I’m with you.”
+Alan:“But Gabriel,” 
+Alan:“I want to know what is happening to my parents and where did they go.” 
+Gabriel:“Alan, If I tell you everything.” 
+Gabriel:“Will you promise me that you will forget it and we will never talk about it again?”
+Alan:“Yes Gabriel, I promise.”
+
+
+credits
+
+
+Gabriel:“Master, the story started when you were young.”
+Gabriel:“When I came to this house.” 
+Gabriel:“I met your parents.” 
+Gabriel:“and I found you cute and lively little master.”
+Alan:“Gabriel, can you skip to when this thing happened?”
+Gabriel:“Patience, master, I want to tell you everything”
+Gabriel:“Your parents loved you, master”
+Gabriel:“They gave their twilight years” 
+Gabriel:“to figure out how to cure the disease in you.”
+Alan:“The thing that said about me in the document is this”
+Gabriel:“Yes, master”
+Alan:“Gabriel, what happened to my mom and dad..”
+Gabriel:“I cannot hide it from you, do I?”
+Gabriel:“Ok, master”
+Gabriel:“Everything happened on your 13th birthday”
+Gabriel:“That day, Master and Mistress were working as usual”
+Gabriel:“To find a cure for you, young master”
+Alan:“I had a picture of something like that earlier today”
+Alan:“This is what they were doing...”
+Alan:“I was the one who killed them...”
+Gabriel:“No master, you did not kill your parents”
+Alan:“What are you talking about...”
+Alan:“I was the one who pushed them down from the stairs”
+Alan:“I saw them lying on the floor”
+Gabriel:“Master, listen to me, you were not the one who killed your parents”
+Alan:“Then who?”
+Gabriel:“Francis killed them”
+Alan:“Francis?”
+Alan:“But.. Why...?” Crying
+Gabriel:“It started when your parents were talking with the lawyer”
+Gabriel:“Francis knew the truth that you are sick”
+Gabriel:“With your parents protecting you, he couldn’t do anything”
+Alan:“Why did he have to do it...”
+Gabriel:“Because if you die,” 
+Gabriel:“All the treasures in this place will be his by the law”
+Alan:“Why did he kill my parents but not me?”
+Gabriel:“Because if you die when your parents are alive” 
+Gabriel:“That will get Francis arrested immediately”
+Gabriel:“And he wouldn’t get a chance to do what he did today”
+Alan:“Why, Francis...”
+Alan:“I thought he was a good man”
+Gabriel:“Yes, he was”
+Gabriel:“Before he knew about the treasure”
+Alan:“So Gabriel, what does it says in the document”
+Gabriel:“Ok master,”
+Gabriel:“The document is all about your medical treatment”
+Gabriel:“You have suffered a very strange disease”
+Gabriel:“That will end up killing you when you are 18 years old”
+Gabriel:“Now you do not feel it, and has no idea that it is inside you”
+Alan:“So what happened during the treatment?”
+Alan:“It said in the document”
+Gabriel:“Master, this will sound very scary”
+Gabriel:“Your parents used live humans for experimentation” 
+Gabriel:“and always ended up killing them”
+Gabriel:“And you, master”
+Gabriel:“Always sneaking on what they are doing”
+Alan:“So that is why I never saw them during the day”
+Alan:“Why did they have to do terrible things like that...”
+Gabriel:“Because of love master”
+Gabriel:“They loved your from the bottom of their hearts”
+Alan:“So this is love...” crying and happy
+Alan:“Ok Gabriel”
+Alan:“I do not want to listen anymore”
+
+
+Fade
+
+Alan:“Are you sure about this Gabriel?”
+Gabriel:“Yes master, anything for you”
+Alan:“Starting with this injection…, and...”
+Gabriel:“Master, I know you can do it”
+Gabriel:“And your parents also knew...”
+Alan:“Tell me how you feel after you are awake...”
+Gabriel:“Yes master”
+Gabriel:“And now Gabriel...”
+Gabriel:“Sleep...”
+

@@ -91,7 +91,11 @@
     <Compile Include="Assets\Scripts\LetterText.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\LockedDoor.cs" />
+    <Compile Include="Assets\Scripts\ParentBox.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad.cs" />
+    <Compile Include="Assets\Scripts\SaveProgress.cs" />
     <Compile Include="Assets\Scripts\TextBoxManager.cs" />
     <Compile Include="Assets\Scripts\TextBoxManagerAct2.cs" />
     <Compile Include="Assets\Scripts\TextBoxManagerAct3.cs" />
@@ -121,6 +125,7 @@
   <ItemGroup>
     <None Include="Assets\Text\act2.txt" />
     <None Include="Assets\Text\act3.txt" />
+    <None Include="Assets\Text\act4.txt" />
     <None Include="Assets\Text\corridor.txt" />
     <None Include="Assets\Text\exampletxt.txt" />
     <None Include="Assets\Text\first.txt" />

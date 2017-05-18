@@ -1,12 +1,12 @@
-Francis: “Master, here is your medicine, don’t forget to take it.”
-Alan: “No, It tastes awful, I don't want to take it.”
-Francis: “Please take it, master, It is good for your health.”
-Alan: “Ok, I will.”
-Alan: “Francis, did you find my parents. It has been 2 years since…”
-Francis: “Master!! We agreed that we wouldn’t talk about this anymore.”
-Alan: “Ok…”
-Francis: “Good, it is time for you to go to bed.”
+Francis:“Alan, sir, here is your prescription for today.”
+Alan: “But Francis..., I don't want to take it. The medicine tastes awful.”
+Francis: “It is vital for your health, sir.”
+Alan: “Fine.”
+Alan: “Francis..., have you found my parents? It's been two years since..”
+Francis: “Alan!! We agreed to never talk about this again.”
+Alan: “Alright...”
+Francis: “Thank you sir. Well then, I will leave you to rest for now.”
 Francis: “Good night, Master.”
 Alan: “Good night, Francis…”
 Alan closes his eyes, Francis has walked out of the room.
-Alan: “He’s gone… I cannot sleep, I will go down and read some books.”
+Alan: “He’s gone…, I cannot sleep. Better go downstairs and find something to read.”

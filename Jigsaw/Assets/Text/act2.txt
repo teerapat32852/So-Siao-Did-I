@@ -1,16 +1,16 @@
-Alan: “I have to complete the picture for I can find out what happen to my parents and what is in the box.”
-Walk around the house to find all the picture pieces
+Alan: “I have to complete the picture for I can find out what happen to my parents and what is in the box.”;1
+Walk around the house to find all the picture pieces;0
 MOMROOM1ST
-Alan:"This door is locked."
-Alan:"How about the living room?"
+Alan:"This door is locked.";1
+Alan:"How about the living room?";1
 MOMROOM
-Alan:"This door is locked, I have to find the key for this room."
+Alan:"This door is locked, I have to find the key for this room.";1
 LIVINGROOM
-Alan: “Somehow this room feels strange, I wonder what it is.”
+Alan: “Somehow this room feels strange, I wonder what it is.”;2
 LIVINGPIC
 showpic
-Alan:"Number 8?"
-Alan:"I think it has something to do with the number 5 i found earlier."
+Alan:"Number 8?";1
+Alan:"I think it has something to do with the number 5 i found earlier.";2
 DININGROOM
 cutscene1
 cutscene2
@@ -23,26 +23,26 @@ cutscene3
 
 
 FRANCISROOM
-Francis: “Who’s there, Alan is that you?”
-Alan: “I have to get back to my room.”
-Francis: “Alan?”
+Francis: “Who’s there, Alan is that you?”;0
+Alan: “I have to get back to my room.”;3
+Francis: “Alan?”;0
 
 GETCAUGHT
-Francis: “Alan!!!, why are you not in your bed.”
-Francis takes Alan back to his room.
+Francis: “Alan!!!, why are you not in your bed.";4
+Francis takes Alan back to his room.;0
 
 SAFE
 CUTSCENE
-???: “Alan, have you not slept yet?”
-Alan: “No, he knows that I’m not sleeping.”
-Gabriel: “Alan don’t be afraid”
-Alan: “Gabriel?, What happened?“
-Gabriel: “Alan, quick!! Get this, the key for your Father & Mother bedroom.”
-Alan: “Gabriel!! what is happening?”
-Gabriel: “There is no time to speak. Quick Alan get back into your room, and do not trust Francis.”
+???: “Alan, have you not slept yet?”;0
+Alan: “No, he knows that I’m not sleeping.”;0
+Gabriel: “Alan don’t be afraid”;0
+Alan: “Gabriel?, What happened?“;0
+Gabriel: “Alan, quick!! Get this, the key for your Father & Mother bedroom.”;0
+Alan: “Gabriel!! what is happening?”;0
+Gabriel: “There is no time to speak. Quick Alan get back into your room, and do not trust Francis.”;0
 
 
 
 GAMEOVER
-“I must not let Francis know what I am doing.”
+“I must not let Francis know what I am doing.”;0
 

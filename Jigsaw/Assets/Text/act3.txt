@@ -49,7 +49,71 @@ showbox
 Alan:“What is that note?”
 shownote
 “What does this mean?, Are there keys in this box?” 
-“Maybe it is the key for the rooms which are across my room, I wonder what is in there.”
+“Maybe these are the keys for the rooms which are across my room, I wonder what is in there.”
+
+
+enter weird rooms
+Alan:"There are something weird with these rooms, I should check out all of them."
+
+
+find pic in room
+pic
+Alan:"Another piece of the picture, number 1."
+Alan:"It must have something to do with the box downstairs."
+
+parentboxunlock
+Alan: “Another key?”
+Alan:“Again?”
+Alan:“Maybe it's for the room that is besides the living room.”
+
+
+wander
+Alan: “I have to check the room next to the living room.”
+
+
+clickparentwork
+Alan:“Yes, It's the key for this room."
+
+enterwork
+Alan:"Something is eerie about this room..."
+
+
+interactlocket
+Alan:“What is this, a locket?”
+closed locket
+open locket
+Alan:“This must be picture of mom.”
+Alan:“This belonged to dad.”
+cutscene alan stalk
+Alan:"What’s that…"
+Alan:"What were they doing?"
+
+
+interact pic
+pic
+Alan:"A piece of picture, a man,"
+Alan:"He looks so cool and handsome."
+Alan:“A number, 7…”
+Alan:“The picture it's complete.”
+complete picture
+Alan:"I have all the numbers. It's 58217."
+Alan:"I should go to the reading room and unlock the box."
+
+
+exit room
+Gabriel:“Alan!!”
+Alan:“Gabriel? What is going on”
+Gabriel:“Take this! It is the key to Francis’ room”
+Alan:“What is happ…..”
+Gabriel:“There is no time, Alan!!”
+Gabriel:“You have to go to Francis’ room now, there is a clue on what happened to your parents.”
+Alan: “But, Gabri..”
+Gabriel: “Go!!”
+gabriel go away
+
+
+caught by fran
+Francis: “Alan!!!, why are you not asleep.”
 
 
 

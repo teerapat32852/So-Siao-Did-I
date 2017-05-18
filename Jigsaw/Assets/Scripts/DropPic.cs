@@ -16,6 +16,7 @@ public class DropPic : MonoBehaviour {
         if(intrigger==true&& Input.GetKeyDown(KeyCode.E))
         {
             pic.SetActive(true);
+            Destroy(gameObject);
         }
 		
 	}
